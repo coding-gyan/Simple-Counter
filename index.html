@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <p class="heading">Counter</p>
+        <p class="counter" id="counter">0</p>
+        <button class="incr"><i class="fas fa-plus"></i></button>
+        <button class="decr"><i class="fas fa-minus"></i></button>
+    </div>
+
+    <script>
+        const counter = document.getElementById('counter');
+        const incr = document.querySelector('.incr');
+        const decr = document.querySelector('.decr');
+
+        let count = 0;
+        incr.addEventListener("click", ()=>{
+            count++;
+            counter.innerHTML = count;
+        });
+
+        
+        decr.addEventListener("click", ()=>{
+            count--;
+            counter.innerHTML = count;
+        });
+    </script>
+</body>
+</html>
